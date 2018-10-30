@@ -1,0 +1,28 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+#
+# reszta.py
+
+
+def wydajReszte1(r, l):
+    i = 0  # index nominału
+    while r > 0:
+        if r >= l[i]:
+            ileNm = int(r / l[i])
+            r -= ileNm * l[i]
+            print('{} x {} zł'.format(ileNm, l[i]))
+        i += 1
+
+
+def main(args):
+    listaNm = [200, 100, 50, 20, 10, 5, 2, 1]  # dostepne nominaly
+    reszta = int(input('Podaj reszte: '))
+
+    wydajReszte1(reszta, listaNm)
+
+    return 0
+
+
+if __name__ == '__main__':
+    import sys
+    sys.exit(main(sys.argv))
