@@ -24,7 +24,7 @@ class ONPKlasa(Stos):
         return True
 
     def oblicz_onp(self):
-        onp = self.onp_str.split(" ")
+        onp = self.onp_str.strip().split(" ")
 
         for el in onp:
             if el.isdigit():
@@ -88,9 +88,9 @@ def main(args):
     o2 = ONPKlasa(a_str="(4+5)*6")
     o2.a2onp()
     print(o2.onp_str)
-    # o2.oblicz_onp()
-    # print("Obliczenia:", o2.log)
-    # print("Wynik: ", o2.wynik)
+    o2.oblicz_onp()
+    print("Obliczenia:", o2.log)
+    print("Wynik: ", o2.wynik)
     return 0
 
 
