@@ -24,6 +24,15 @@ pal1_prost = pal1.get_rect()
 pal1_prost.x = 350
 pal1_prost.y = 360
 
+# paletka gracza 1
+# utworzenie powierzchni paletki, wypełnienie jej kolorem,
+pal2 = pygame.Surface([PAL_SZER, PAL_WYS])
+pal2.fill((255, 0, 0))
+# ustawienie prostokąta zawierającego paletkę w początkowej pozycji
+pal2_prost = pal2.get_rect()
+pal2_prost.x = 350
+pal2_prost.y = 20
+
 
 # pętla główna programu
 while True:
@@ -39,6 +48,7 @@ while True:
 
     # umieść na planszy paletki graczy
     plansza.blit(pal1, pal1_prost)
+    plansza.blit(pal2, pal2_prost)
 
     # rysowanie okna
     pygame.display.update()
